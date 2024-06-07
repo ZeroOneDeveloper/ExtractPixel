@@ -43,9 +43,9 @@ for file in os.listdir("./datasets"):
         print(f'height : {height}')
         print(f'channels : {channels}')
         print(f'pixels : {width * height}')
-        for y in range(width):
+        for y in range(height):
             result.append([])
-            for x in range(height):
+            for x in range(width):
                 r, g, b, a = image[x, y]
                 result[-1].append(
                     [r, g, b, a] if DISPLAY_ALPHA_CHANNEL else [r, g, b]
